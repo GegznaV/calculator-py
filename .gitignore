@@ -159,3 +159,5 @@ cython_debug/
 .RData
 .Ruserdata
 
+# Other files
+setup.py
