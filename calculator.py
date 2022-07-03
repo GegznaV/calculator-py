@@ -2,14 +2,14 @@ class Calculator:
     """Class which works as a simple calculator.
 
     The class performs basic math operations with the value of attribute
-    `.result` (its `initial_value` is 0) saves the result as a new value 
+    `.result` (its initial value is 0), and saves the result as a new value 
     of `.result`.
 
     To reset `.result` value to 0, use `.reset()` method.
     """
 
-    def __init__(self, initial_value: float =0.0) -> None:
-        self.result = initial_value
+    def __init__(self) -> None:
+        self.result = 0.0
 
     def add(self, value: float) -> None:
         """Addition
@@ -149,6 +149,20 @@ class Calculator:
         """
         self.take_n_root(n=2)
 
-    def reset(self) -> None:
-        """Reset the value of attribute `.result` to 0"""
-        self.result = 0.0
+    def reset(self, to:float=0.0) -> None:
+        """Reset the value of attribute `.result`
+        
+        By default, the value is reset to 0.
+        
+        Parameters
+        ----------
+        to: float :
+             New value of attribure `.result`.
+             (Default value = 0.0)
+
+        Returns
+        -------
+        Noting. Updates the value of attribute `.result` to 0 (default) or
+        other numeric value provided by user.
+        """
+        self.result = to
