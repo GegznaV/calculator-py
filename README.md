@@ -17,8 +17,8 @@ Attributes:
 
 Mehods:
 
-- `.add()`, `.subtract()`, `.divide_by()`, `.multiply_by()`, `.exponentiate()`, `.take_n_root()` -- These functions perform indicated mathematical operations on `.result` with `value` indicated in appropriate function and saves the result as , `.result`.
-- `.reset()` -- resets the `.result` to 0.
+- `.add()`, `.subtract()`, `.divide_by()`, `.multiply_by()`, `.exponentiate()`, `.take_n_root()`, `.sqrt()` -- These methods perform mathematical operations (addition, subtraction, division, scalar multiplication, exponentiotion, taking n-th root, and taking square root) on numeric values `.result` (attribute) and `value` (or `n` provided by user) and saves the result as `.result`.
+- `.reset()` -- THis method resets the `.result` to 0 (default) or other user defned value.
 
 
 ## Installation
@@ -35,7 +35,7 @@ Simple calculations
 ```python
 >>> from calculator import Calculator
 >>> calculator = Calculator()
->>> calculator.set_value(35)
+>>> calculator.reset(to=35)
 >>> calculator.result
 35
 >>> caltulator.reset()
@@ -44,15 +44,14 @@ Simple calculations
 >>> calculator.subtract(10)
 >>> calculator.result
 -10
->>> calculator.add(46).take_n_root(n=2)
+>>> calculator.add(46)
+>>> calculator.take_n_root(n=2)
 >>> calculator.result
 6
 >>> caltulator.reset()
 >>> calculator.result
 0
 ```
-
-`caltulator.reset()` sets value of `.result` to 0.
 
 
 ## Development setup
