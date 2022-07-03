@@ -8,6 +8,7 @@ authors = [{name = "Vilmantas Gegzna", email = "GegznaV@gmail.com"}]
 license = {file = "LICENSE"}
 classifiers = ["License :: OSI Approved :: MIT License"]
 dynamic = ["version", "description"]
+description-file = "README.md"
 
 [project.urls]
 Home = "https://github.com/gegznav/calculator-py"
