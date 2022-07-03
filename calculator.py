@@ -6,6 +6,21 @@ class Calculator:
     of `.result`.
 
     To reset `.result` value to 0, use `.reset()` method.
+    
+    Examples
+    --------
+    >>> calculator = Calculator()
+    >>> print(calculator.result)
+    0.0
+    >>> calculator.add(100)
+    >>> print(calculator.result)
+    100.0
+    >>> calculator.sqrt()
+    >>> print(calculator.result)
+    10.0
+    >>> calculator.reset()
+    >>> print(calculator.result)
+    0.0
     """
 
     def __init__(self) -> None:
@@ -30,6 +45,17 @@ class Calculator:
         -------
         Noting. Updates the value of attribute `.result` with the result
         of performed mathematical operation.
+        
+        
+        Examples
+        --------
+        >>> calculator = Calculator()
+        >>> calculator.add(100)
+        >>> print(calculator.result)
+        100.0
+        >>> calculator.add(6)
+        >>> print(calculator.result)
+        106.0
         """
         self.result += value
 
@@ -51,6 +77,15 @@ class Calculator:
         Noting. Updates the value of attribute `.result` with the result
         of performed mathematical operation.
 
+        Examples
+        --------
+        >>> calculator = Calculator()
+        >>> calculator.subtract(100)
+        >>> print(calculator.result)
+        -100.0
+        >>> calculator.subtract(6)
+        >>> print(calculator.result)
+        -106.0
         """
         self.result -= value
 
@@ -72,6 +107,13 @@ class Calculator:
         Noting. Updates the value of attribute `.result` with the result
         of performed mathematical operation.
 
+        Examples
+        --------
+        >>> calculator = Calculator()
+        >>> calculator.reset(to=100)
+        >>> calculator.multiply_by(2)
+        >>> calculator.result
+        200.0
         """
         self.result *= value
 
@@ -117,7 +159,14 @@ class Calculator:
         -------
         Noting. Updates the value of attribute `.result` with the result
         of performed mathematical operation.
-
+        
+        Examples
+        --------
+        >>> calculator = Calculator()
+        >>> calculator.reset(to=10)
+        >>> calculator.exponentiate(2)
+        >>> calculator.result
+        100.0
         """
         self.result = self.result**n
 
@@ -137,6 +186,13 @@ class Calculator:
         Noting. Updates the value of attribute `.result` with the result
         of performed mathematical operation.
 
+        Examples
+        --------
+        >>> calculator = Calculator()
+        >>> calculator.reset(to=1000)
+        >>> calculator.take_n_root(3)
+        >>> calculator.result
+        10.0
         """
         self.result = self.result**(1/n)
 
@@ -146,6 +202,14 @@ class Calculator:
         Takes a square root of attribute `.result` and updates its value with
         the result of mathematical operation. It is a convenience method
         wrapped arround `.take_n_root()` with value `n=2`.
+        
+        Examples
+        --------
+        >>> calculator = Calculator()
+        >>> calculator.reset(to=10000)
+        >>> calculator.sqrt()
+        >>> calculator.result
+        100.0
         """
         self.take_n_root(n=2)
 
@@ -164,5 +228,15 @@ class Calculator:
         -------
         Noting. Updates the value of attribute `.result` to 0 (default) or
         other numeric value provided by user.
+        
+        Examples
+        --------
+        >>> calculator = Calculator()
+        >>> calculator.reset(to=10000)
+        >>> print(calculator.result)
+        10000.0
+        >>> calculator.reset()
+        >>> print(calculator.result)
+        0.0
         """
         self.result = to
