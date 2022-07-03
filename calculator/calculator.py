@@ -1,3 +1,7 @@
+"""This module contains class `Calculator` which performs basic mathematical
+operations.
+"""
+
 class Calculator:
     """Class which works as a simple calculator.
 
@@ -241,3 +245,7 @@ class Calculator:
         0.0
         """
         self.result = to
+        
+if __name__ == "__main__":
+    import doctest
+    doctest.testmod()
