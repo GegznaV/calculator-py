@@ -24,10 +24,11 @@ class Calculator:
     """
 
     def __init__(self) -> None:
+        """Initialize class 'Calculator'."""
         self.result = 0.0
 
     def add(self, value: float) -> None:
-        """Addition
+        """Addition.
 
         Add `value` to `.result` and save the result as `.result`.
 
@@ -60,7 +61,7 @@ class Calculator:
         self.result += value
 
     def subtract(self, value: float) -> None:
-        """Subtraction
+        """Subtraction.
 
         From `.result` subtract `value` and save the result as `.result`.
         ```
@@ -90,7 +91,7 @@ class Calculator:
         self.result -= value
 
     def multiply_by(self, value: float) -> None:
-        """Scalar multiplication
+        """Scalar multiplication.
 
         Multiply `.result` by `value` and save the result as `.result`.
 
@@ -118,7 +119,7 @@ class Calculator:
         self.result *= value
 
     def divide_by(self, value: float) -> None:
-        """Division
+        """Division.
 
         Divide  `.result` by `value` and save the result as `.result`.
         ```
@@ -140,7 +141,7 @@ class Calculator:
         self.result /= value
 
     def exponentiate(self, n: float) -> None:
-        """Exponentiation
+        """Exponentiation.
 
         Exponentiote `.result` by `n` (`.result^n`, or in Python `.result**n`) 
         and save the result as `.result`.
@@ -171,7 +172,7 @@ class Calculator:
         self.result = self.result**n
 
     def take_n_root(self, n: float = 2) -> None:
-        """Take n-th root
+        """Take n-th root.
 
         Take n-th root of atribute.
 
@@ -197,7 +198,7 @@ class Calculator:
         self.result = self.result**(1/n)
 
     def sqrt(self) -> None:
-        """Square root
+        """Square root.
 
         Takes a square root of attribute `.result` and updates its value with
         the result of mathematical operation. It is a convenience method
@@ -214,7 +215,7 @@ class Calculator:
         self.take_n_root(n=2)
 
     def reset(self, to:float=0.0) -> None:
-        """Reset the value of attribute `.result`
+        """Reset the value of attribute `.result`.
         
         By default, the value is reset to 0.
         
