@@ -250,6 +250,9 @@ class Calculator:
         >>> print(calculator.result)
         0.0
         """
+        if not isinstance(to, (int, float)):
+            raise TypeError(f"`to` must be int of float, but is {type(to)}")
+
         self.result = float(to)
 
 
