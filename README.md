@@ -2,14 +2,12 @@
 
 > Python class for basic math operations.
 
-> GitHub repo with continuous integration: https://github.com/GegznaV/calculator-py
-
 [![PyPI Version][pypi-image]][pypi-url]
 [![Build Status][build-image]][build-url]
 [![Code Coverage][coverage-image]][coverage-url]
 [![License: MIT][license-image]][license-url]
 
-`calculator` is a Python class that performs basic mathematical operations, including:
+Package `calculator` contains Python class `Calculator` that performs basic mathematical operations, including:
 
 - addition;
 - subtraction;
@@ -17,6 +15,7 @@
 - division;
 - exponentiation;
 - taking square root and taking n-th root.
+
 
 ## Details
 
@@ -29,7 +28,6 @@ Class methods:
 
 - `.add()`, `.subtract()`, `.multiply_by()`, `.divide_by()`,  `.exponentiate()`, `.take_n_root()`, `.sqrt()` -- These methods perform mathematical operations (addition, subtraction, scalar multiplication, division, exponentiation, taking n-th root, and taking square root respectively) on numeric value of `.result` (attribute) and number provided by the user and saves the result as `.result`.
 - `.reset()` -- This method resets the `.result` to 0 (default) or other user defined value.
-
 
 
 ## Installation
@@ -70,6 +68,13 @@ pip install --index-url https://test.pypi.org/simple/ calculator_vg
 >>> calculator.result
 0.0
 ```
+
+## GitHub Repository
+
+GitHub repo (with continuous integration) that hosts the project:
+
+- https://github.com/GegznaV/calculator-py
+
 
 
 <!-- Badges -->
