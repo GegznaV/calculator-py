@@ -16,6 +16,21 @@
 - exponentiation;
 - taking square root and taking n-th root.
 
+
+## Details
+
+Class attributes:
+
+- `.result` -- contains a numeric value of current result.
+   Initial default value is 0.
+
+Class methods:
+
+- `.add()`, `.subtract()`, `.multiply_by()`, `.divide_by()`,  `.exponentiate()`, `.take_n_root()`, `.sqrt()` -- These methods perform mathematical operations (addition, subtraction, scalar multiplication, division, exponentiation, taking n-th root, and taking square root respectively) on numeric value of `.result` (attribute) and number provided by the user and saves the result as `.result`.
+- `.reset()` -- This method resets the `.result` to 0 (default) or other user defined value.
+
+
+
 ## Installation
 
 <!--
@@ -29,6 +44,7 @@ Install from TestPyPi:
 ```bash
 pip install --index-url https://test.pypi.org/simple/ calculator_vg
 ```
+
 
 ## Usage
 
@@ -53,21 +69,6 @@ pip install --index-url https://test.pypi.org/simple/ calculator_vg
 >>> calculator.result
 0.0
 ```
-
-
-## Details
-
-Class attributes:
-
-- `.result` -- contains a numeric value of current result.
-   Initial default value is 0.
-
-Class methods:
-
-- `.add()`, `.subtract()`, `.multiply_by()`, `.divide_by()`,  `.exponentiate()`, `.take_n_root()`, `.sqrt()` -- These methods perform mathematical operations (addition, subtraction, scalar multiplication, division, exponentiation, taking n-th root, and taking square root respectively) on numeric value of `.result` (attribute) and number provided by a user and saves the result as `.result`.
-- `.reset()` -- This method resets the `.result` to 0 (default) or other user defined value.
-
-
 
 
 <!-- Badges -->
