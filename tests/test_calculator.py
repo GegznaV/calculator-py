@@ -16,42 +16,6 @@ def test_method__reset():
     assert calc.result == 100
 
 
-def test_method__add__basic():
-    calc = c.Calculator()
-    calc.add(5)
-    assert calc.result == 5
-
-
-def test_method__add__wrong_inputs():
-    calc = c.Calculator()
-    # Input is str instead of float:
-    with py.test.raises(TypeError):
-        calc.add("a")
-    # Too many args:
-    with py.test.raises(TypeError):
-        calc.add(1, 2)
-
-
-def test_method__subtract__basic():
-    calc = c.Calculator()
-    calc.subtract(15)
-    assert calc.result == -15
-
-
-def test_method__multiply_by__basic():
-    calc = c.Calculator()
-    calc.reset(to=-10)
-    calc.multiply_by(-5)
-    assert calc.result == 50
-
-
-def test_method__divide_by__basic():
-    calc = c.Calculator()
-    calc.reset(to=50)
-    calc.divide_by(5)
-    assert calc.result == 10
-
-
 def test_method__take_n_root__basic():
     calc = c.Calculator()
 
@@ -126,3 +90,38 @@ def test_method__exponentiate__basic():
     calc.exponentiate(3)
     assert calc.result == 1000
 
+
+def test_method__add__basic():
+    calc = c.Calculator()
+    calc.add(5)
+    assert calc.result == 5
+
+
+def test_method__add__wrong_inputs():
+    calc = c.Calculator()
+    # Input is str instead of float:
+    with py.test.raises(TypeError):
+        calc.add("a")
+    # Too many args:
+    with py.test.raises(TypeError):
+        calc.add(1, 2)
+
+
+def test_method__subtract__basic():
+    calc = c.Calculator()
+    calc.subtract(15)
+    assert calc.result == -15
+
+
+def test_method__multiply_by__basic():
+    calc = c.Calculator()
+    calc.reset(to=-10)
+    calc.multiply_by(-5)
+    assert calc.result == 50
+
+
+def test_method__divide_by__basic():
+    calc = c.Calculator()
+    calc.reset(to=50)
+    calc.divide_by(5)
+    assert calc.result == 10
