@@ -46,12 +46,10 @@ class Calculator:
         value: float :
             The value that is added to `.result`.
 
-
         Returns
         -------
         Noting. Updates the value of attribute `.result` with the result
         of performed mathematical operation.
-
 
         Examples
         --------
@@ -131,7 +129,6 @@ class Calculator:
         .result = .result / value
         ```
 
-
         Parameters
         ----------
         value: float :
@@ -141,6 +138,14 @@ class Calculator:
         -------
         Noting. Updates the value of attribute `.result` with the result
         of performed mathematical operation.
+
+        Examples
+        --------
+        >>> calculator = Calculator()
+        >>> calculator.reset(to=100)
+        >>> calculator.divide_by(2)
+        >>> calculator.result
+        50.0
 
         """
         self.result /= value
@@ -154,12 +159,10 @@ class Calculator:
         .result = .result ** n
         ```
 
-
         Parameters
         ----------
         n: float :
             exponent
-
 
         Returns
         -------
