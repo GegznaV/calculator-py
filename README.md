@@ -33,17 +33,17 @@ Class methods:
 
 ## Installation
 
-<!--
 ```bash
 pip install calculator_vg
 ``` 
--->
 
+<!--
 Install from TestPyPi:
 
 ```bash
 pip install --index-url https://test.pypi.org/simple/ calculator_vg
 ```
+-->
 
 
 ## Usage
