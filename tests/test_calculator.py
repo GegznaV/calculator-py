@@ -126,10 +126,3 @@ def test_method__exponentiate__basic():
     calc.exponentiate(3)
     assert calc.result == 1000
 
-
-# hypothesis
-
-
-# Testus išskaidyti į mažesnes funkcijas
-
-# a**(1/n), jei n < 0
