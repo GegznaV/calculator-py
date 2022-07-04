@@ -244,7 +244,7 @@ class Calculator:
         >>> print(calculator.result)
         0.0
         """
-        self.result = to
+        self.result = float(to)
         
 if __name__ == "__main__":
     import doctest
