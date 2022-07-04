@@ -2,6 +2,8 @@
 
 > Python class for basic math operations.
 
+> GitHub repo with continuous integration: https://github.com/GegznaV/calculator-py
+
 [![PyPI Version][pypi-image]][pypi-url]
 [![Build Status][build-image]][build-url]
 [![Code Coverage][coverage-image]][coverage-url]
@@ -15,7 +17,6 @@
 - division;
 - exponentiation;
 - taking square root and taking n-th root.
-
 
 ## Details
 
