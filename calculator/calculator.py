@@ -197,7 +197,9 @@ class Calculator:
         >>> calculator.reset(to=1000)
         >>> calculator.take_n_root(3)
         >>> calculator.result
-        10.0
+        9.999999999999998
+        
+        # 9.999999999999998 is an approximate result of 10.0
         """
         self.result = self.result**(1/n)
 
