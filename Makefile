@@ -10,7 +10,7 @@ deps:  ## Install dependencies
 	python -m pip install --upgrade pip
 	python -m pip install black coverage flake8 flit pyflakes mccabe mypy pylint hypothesis pytest tox tox-gh-actions
 
-format: ## Format code
+format:  ## Format code
     python -m black calculator
     python -m black test
 
