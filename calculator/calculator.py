@@ -101,7 +101,7 @@ class Calculator:
         Parameters
         ----------
         value: float :
-            The value that `.result` is multipied by.
+            The value that `.result` is multiplied by.
         ```
         .result = .result * value
         ```
@@ -153,7 +153,7 @@ class Calculator:
     def exponentiate(self, n: float) -> None:
         """Exponentiation.
 
-        Exponentiote `.result` by `n` (`.result^n`, or in Python `.result**n`)
+        Exponentiate `.result` by `n` (`.result^n`, or in Python `.result**n`)
         and save the result as `.result`.
         ```
         .result = .result ** n
@@ -182,7 +182,7 @@ class Calculator:
     def take_n_root(self, n: float = 2) -> None:
         """Take n-th root.
 
-        Take n-th root of atribute.
+        Take n-th root of attribute.
 
         Parameters
         ----------
@@ -212,7 +212,7 @@ class Calculator:
 
         Takes a square root of attribute `.result` and updates its value with
         the result of mathematical operation. It is a convenience method
-        wrapped arround `.take_n_root()` with value `n=2`.
+        wrapped around `.take_n_root()` with value `n=2`.
 
         Examples
         --------
@@ -232,7 +232,7 @@ class Calculator:
         Parameters
         ----------
         to: float :
-             New value of attribure `.result`.
+             New value of attribute `.result`.
              (Default value = 0.0)
 
         Returns
@@ -255,5 +255,4 @@ class Calculator:
 
 if __name__ == "__main__":
     import doctest
-
     print(doctest.testmod())
