@@ -2,15 +2,16 @@
 operations.
 """
 
+
 class Calculator:
     """Class which works as a simple calculator.
 
     The class performs basic math operations with the value of attribute
-    `.result` (its initial value is 0), and saves the result as a new value 
+    `.result` (its initial value is 0), and saves the result as a new value
     of `.result`.
 
     To reset `.result` value to 0, use `.reset()` method.
-    
+
     Examples
     --------
     >>> calculator = Calculator()
@@ -50,8 +51,8 @@ class Calculator:
         -------
         Noting. Updates the value of attribute `.result` with the result
         of performed mathematical operation.
-        
-        
+
+
         Examples
         --------
         >>> calculator = Calculator()
@@ -147,7 +148,7 @@ class Calculator:
     def exponentiate(self, n: float) -> None:
         """Exponentiation.
 
-        Exponentiote `.result` by `n` (`.result^n`, or in Python `.result**n`) 
+        Exponentiote `.result` by `n` (`.result^n`, or in Python `.result**n`)
         and save the result as `.result`.
         ```
         .result = .result ** n
@@ -164,7 +165,7 @@ class Calculator:
         -------
         Noting. Updates the value of attribute `.result` with the result
         of performed mathematical operation.
-        
+
         Examples
         --------
         >>> calculator = Calculator()
@@ -198,10 +199,10 @@ class Calculator:
         >>> calculator.take_n_root(3)
         >>> calculator.result
         9.999999999999998
-        
+
         # 9.999999999999998 is an approximate result of 10.0
         """
-        self.result = self.result**(1/n)
+        self.result = self.result ** (1 / n)
 
     def sqrt(self) -> None:
         """Square root.
@@ -209,7 +210,7 @@ class Calculator:
         Takes a square root of attribute `.result` and updates its value with
         the result of mathematical operation. It is a convenience method
         wrapped arround `.take_n_root()` with value `n=2`.
-        
+
         Examples
         --------
         >>> calculator = Calculator()
@@ -220,11 +221,11 @@ class Calculator:
         """
         self.take_n_root(n=2)
 
-    def reset(self, to:float=0.0) -> None:
+    def reset(self, to: float = 0.0) -> None:
         """Reset the value of attribute `.result`.
-        
+
         By default, the value is reset to 0.
-        
+
         Parameters
         ----------
         to: float :
@@ -235,7 +236,7 @@ class Calculator:
         -------
         Noting. Updates the value of attribute `.result` to 0 (default) or
         other numeric value provided by user.
-        
+
         Examples
         --------
         >>> calculator = Calculator()
@@ -247,7 +248,9 @@ class Calculator:
         0.0
         """
         self.result = float(to)
-        
+
+
 if __name__ == "__main__":
     import doctest
+
     print(doctest.testmod())
