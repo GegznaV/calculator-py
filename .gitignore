@@ -162,3 +162,4 @@ cython_debug/
 # Other files
 000--questions.ipynb
 setup.sh
+setup-passwords.sh
