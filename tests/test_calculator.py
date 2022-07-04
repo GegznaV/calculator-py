@@ -8,12 +8,28 @@ def test_initial_values():
     assert calc.result == 0
 
 
-def test_method__reset():
+def test_method__reset__basic():
     calc = c.Calculator()
     calc.reset()
     assert calc.result == 0
+
     calc.reset(to=100)
     assert calc.result == 100
+
+
+def test_method__reset__wrong_inputs():
+    calc = c.Calculator()
+    with py.test.raises(TypeError):
+        calc.reset("a")
+
+    with py.test.raises(TypeError):
+        calc.reset(["a"])
+
+    with py.test.raises(TypeError):
+        calc.reset([1])
+
+    with py.test.raises(TypeError):
+        calc.reset(1, 2)
 
 
 def test_method__take_n_root__basic():
