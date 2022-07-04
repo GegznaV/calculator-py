@@ -160,6 +160,5 @@ cython_debug/
 .Ruserdata
 
 # Other files
-setup.py
 000--questions.ipynb
 setup.sh
