@@ -11,8 +11,8 @@ deps:  ## Install dependencies
 	python -m pip install black coverage flake8 flit pyflakes mccabe mypy pylint hypothesis pytest tox tox-gh-actions
 
 format:  ## Format code
-    python -m black calculator
-    python -m black test
+	python -m black calculator
+	python -m black test
 
 lint:  ## Lint and static-check
 	python -m flake8 calculator
