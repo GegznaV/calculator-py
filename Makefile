@@ -1,19 +1,24 @@
 .DEFAULT_GOAL := help
-.PHONY: coverage deps help lint publish push test tox
+.PHONY: coverage deps format lint publish push test tox help
 
 coverage:  ## Run tests with coverage
 	python -m coverage erase
-	python -m coverage run --include=calculator/* -m pytest -ra
+	python -m coverage run --include=calculator/* -m pytest -ra --doctest-modules --doctest-continue-on-failure
 	python -m coverage report -m
 
 deps:  ## Install dependencies
 	python -m pip install --upgrade pip
-	python -m pip install black coverage flake8 flit mccabe mypy pylint pytest tox tox-gh-actions
+	python -m pip install black coverage flake8 flit pyflakes mccabe mypy pylint hypothesis pytest tox tox-gh-actions
+
+format: ## Format code
+    python -m black calculator
+    python -m black test
 
 lint:  ## Lint and static-check
 	python -m flake8 calculator
-	python -m pylint calculator
+	python -m pyflakes calculator
 	python -m mypy calculator
+	python -m pylint calculator
 
 publish:  ## Publish to PyPi
 	python -m flit publish
@@ -22,7 +27,7 @@ push:  ## Push code with tags
 	git push && git push --tags
 
 test:  ## Run tests
-	python -m pytest -ra
+	python -m pytest -ra --doctest-modules --doctest-continue-on-failure
 
 tox:   ## Run tox
 	python -m tox
