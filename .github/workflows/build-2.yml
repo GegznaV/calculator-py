@@ -31,14 +31,11 @@ jobs:
               run:  |
                   python -m pip install --upgrade pip
                   python -m pip install mccabe flake8 pyflakes mypy pylint \
-                      hypothesis pytest coverage black
+                      hypothesis pytest coverage
 
             - name: Lint and test
               # run:  python -m tox
               run:  |
-                  # Format code
-                  black calculator
-
                   # Check code and style
                   flake8 calculator
                   pyflakes -V calculator
