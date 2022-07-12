@@ -34,12 +34,14 @@ jobs:
                   mypy  calculator
                   pylint --verbose calculator
        
-            - name: Run unit tests
+            - name: Test
               run:  |
                   # Unit test and report coverage
                   coverage erase
                   coverage run --include=calculator/* -m pytest -ra \
                               --doctest-modules --doctest-continue-on-failure
+
+            - name: Report coverage
                   coverage report -m
                   coverage xml
 
