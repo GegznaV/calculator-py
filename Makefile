@@ -5,6 +5,7 @@ coverage:  ## Run tests with coverage
 	python -m coverage run --include=calculator/* -m pytest -ra \
 	                       --doctest-modules --doctest-continue-on-failure
 	python -m coverage report -m
+	python -m coverage xml
 
 deps:  ## Install dependencies
 	python -m pip install --upgrade pip
