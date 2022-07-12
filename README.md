@@ -14,7 +14,7 @@ Package `calculator` contains Python class `Calculator` that performs basic math
 - scalar multiplication;
 - division;
 - exponentiation;
-- taking square root and taking n-th root.
+- taking square root and n-th root.
 
 
 ## Details
@@ -32,6 +32,8 @@ Class methods:
 
 ## Installation
 
+Install from PyPi:
+
 ```bash
 pip install calculator_vg
 ``` 
@@ -44,6 +46,17 @@ pip install --index-url https://test.pypi.org/simple/ calculator_vg
 ```
 -->
 
+Install from GitHub:
+
+```bash
+pip install git+https://github.com/GegznaV/calculator-py.git
+```
+
+Get Docker image from Docker Hub with this package installed:
+
+```bash
+docker pull gegznav/calculator-py
+```
 
 ## Usage
 
@@ -76,14 +89,23 @@ GitHub repo (with continuous integration) that hosts the project:
 - https://github.com/GegznaV/calculator-py
 
 
+## License
+
+This project is licensed under the terms of the [MIT][license-url] license.
+
+
+## Author
+
+Vilmantas Gėgžna
+
 
 <!-- Badges -->
 
 [pypi-image]: https://img.shields.io/pypi/v/calculator_vg
 [pypi-url]: https://pypi.org/project/calculator_vg/
 
-[build-image]: https://github.com/GegznaV/calculator-py/actions/workflows/build.yml/badge.svg
-[build-url]: https://github.com/GegznaV/calculator-py/actions/workflows/build.yml
+[build-image]: https://github.com/GegznaV/calculator-py/actions/workflows/check.yml/badge.svg
+[build-url]: https://github.com/GegznaV/calculator-py/actions/workflows/check.yml
 
 [coverage-image]: https://codecov.io/gh/GegznaV/calculator-py/branch/main/graph/badge.svg
 [coverage-url]: https://codecov.io/gh/GegznaV/calculator-py
