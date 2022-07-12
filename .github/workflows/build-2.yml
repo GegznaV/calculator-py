@@ -42,6 +42,7 @@ jobs:
                               --doctest-modules --doctest-continue-on-failure
 
             - name: Report coverage
+              run:  |
                   coverage report -m
                   coverage xml
 
