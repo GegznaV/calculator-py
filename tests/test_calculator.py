@@ -52,8 +52,8 @@ def test_method__take_n_root__basic():
     n=st.floats(min_value=-10000, max_value=10000, width=16),
 )
 def test_method__take_n_root__extended(base, n):
-    assume(abs(base) >= 0.000001)
-    assume(abs(n) >= 0.000001)
+    assume(abs(base) >= 0.0001)
+    assume(abs(n) >= 0.0001)
 
     calc = c.Calculator()
     calc.reset(to=base)
