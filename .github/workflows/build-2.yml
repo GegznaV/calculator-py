@@ -34,7 +34,7 @@ jobs:
                   mypy  calculator
                   pylint --verbose calculator
        
-            - name: Test
+            - name: Run unit tests
               run:  |
                   # Unit test and report coverage
                   coverage erase
@@ -43,7 +43,7 @@ jobs:
                   coverage report -m
                   coverage xml
 
-            - name: Upload coverage to Codecov
+            - name: Upload coverage report to Codecov
               uses: codecov/codecov-action@v3
               with:
                   fail_ci_if_error: no
