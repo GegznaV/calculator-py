@@ -48,12 +48,12 @@ def test_method__take_n_root__basic():
 
 
 @given(
-    base=st.floats(min_value=-10000, max_value=10000, width=32),
-    n=st.floats(min_value=-10000, max_value=10000, width=32),
+    base=st.floats(min_value=-10000, max_value=10000),
+    n=st.floats(min_value=-10000, max_value=10000),
 )
 def test_method__take_n_root__extended(base, n):
-    assume(abs(base) >= 1e-6)
-    assume(abs(n) >= 1e-6)
+    assume(abs(base) >= 1e-4)
+    assume(abs(n) >= 1e-4)
 
     calc = c.Calculator()
     calc.reset(to=base)
