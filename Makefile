@@ -1,5 +1,4 @@
-.DEFAULT_GOAL := help
-.PHONY: coverage deps format lint publish push test tox help
+.PHONY: coverage deps format lint publish push test tox
 
 coverage:  ## Run tests with coverage
 	python -m coverage erase
