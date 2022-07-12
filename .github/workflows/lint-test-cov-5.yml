@@ -1,4 +1,4 @@
-name: 4) Lint, Test, Coverage (more setup)
+name: 5) Lint, Test, Coverage (make + tox)
 
 on:
   push:
@@ -31,14 +31,8 @@ jobs:
       - name: Install dependencies
         run: make install_deps
 
-      - name: Lint 
-        run: make lint
-
-      - name: Test
-        run: make test_with_coverage
-
-      - name: Report coverage
-        run: make report coverage
+      - name: Run tox (Litn, Test, Coverage)
+        run: make tox
 
       - name: Upload coverage report to Codecov
         uses: codecov/codecov-action@v3
