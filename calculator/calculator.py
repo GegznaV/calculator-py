@@ -32,7 +32,7 @@ class Calculator:
         """Initialize class 'Calculator'."""
         self.result = 0.0
 
-    def add(self,value: float) -> None:
+    def add(self, value: float) -> None:
         """Addition.
 
         Add `value` to `.result` and save the result as `.result`.
