@@ -1,4 +1,4 @@
-.PHONY: install_deps format lint test test_with_coverage coverage_report coverage tox push publish
+.PHONY: install_deps format lint test test_with_coverage report_coverage coverage tox push publish
 
 install_deps:  ## Install dependencies
 	python -m pip install --upgrade pip
@@ -24,13 +24,13 @@ test_with_coverage:  ## Run tests with coverage
 	python -m coverage run --include=calculator/* -m pytest -ra \
 	                       --doctest-modules --doctest-continue-on-failure
 
-coverage_report:  ## Report coverage, test with coverage were run
+report_coverage:  ## Report coverage, if test with coverage were already run
 	python -m coverage report -m
 	python -m coverage xml
 
 coverage:  ## Run tests and report coverage
 	make test_with_coverage
-	make coverage_report
+	make report_coverage
 
 tox:   ## Run tox
 	python -m tox
