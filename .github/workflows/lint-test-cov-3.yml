@@ -1,4 +1,4 @@
-name: 3) Lint, Test, Coverage (via make)
+name: 3) Lint,Test,Cov (via make)
 
 on:
   push:
@@ -27,7 +27,7 @@ jobs:
         run: make test_with_coverage
 
       - name: Report coverage
-        run: make report coverage
+        run: make report_coverage
 
       - name: Upload coverage report to Codecov
         uses: codecov/codecov-action@v3

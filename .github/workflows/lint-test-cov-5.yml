@@ -1,4 +1,4 @@
-name: 5) Lint, Test, Coverage (make + tox)
+name: 5) Lint,Test,Cov (make + tox)
 
 on:
   push:
