@@ -36,6 +36,9 @@ jobs:
             - name: Lint and test
               # run:  python -m tox
               run:  |
+                  # Format code
+                  black calculator
+
                   # Check code and style
                   flake8 calculator
                   pyflakes -V calculator
