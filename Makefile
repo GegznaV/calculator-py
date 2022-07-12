@@ -1,4 +1,4 @@
-.PHONY: coverage deps format lint publish push test tox
+.PHONY: coverage install_deps format lint publish push test tox
 
 coverage:  ## Run tests with coverage
 	python -m coverage erase
@@ -7,7 +7,7 @@ coverage:  ## Run tests with coverage
 	python -m coverage report -m
 	python -m coverage xml
 
-deps:  ## Install dependencies
+install_deps:  ## Install dependencies
 	python -m pip install --upgrade pip
 	python -m pip install black mccabe flake8 flit pyflakes mypy pylint \
 	                      hypothesis pytest coverage tox tox-gh-actions 
