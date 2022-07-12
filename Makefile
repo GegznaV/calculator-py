@@ -1,11 +1,4 @@
-.PHONY: coverage install_deps format lint publish push test tox
-
-coverage:  ## Run tests with coverage
-	python -m coverage erase
-	python -m coverage run --include=calculator/* -m pytest -ra \
-	                       --doctest-modules --doctest-continue-on-failure
-	python -m coverage report -m
-	python -m coverage xml
+.PHONY: install_deps format lint test test_with_coverage coverage_report coverage tox push publish
 
 install_deps:  ## Install dependencies
 	python -m pip install --upgrade pip
@@ -22,14 +15,29 @@ lint:  ## Lint and static-check
 	python -m mypy calculator
 	python -m pylint --verbose calculator
 
-publish:  ## Publish to PyPi
-	python -m flit publish
+test:  ## Run tests
+	python -m pytest -ra --doctest-modules --doctest-continue-on-failure
+
+
+test_with_coverage:  ## Run tests with coverage
+	python -m coverage erase
+	python -m coverage run --include=calculator/* -m pytest -ra \
+	                       --doctest-modules --doctest-continue-on-failure
+
+coverage_report:  ## Report coverage, test with coverage were run
+	python -m coverage report -m
+	python -m coverage xml
+
+coverage:  ## Run tests and report coverage
+	make test_with_coverage
+	make coverage_report
+
+tox:   ## Run tox
+	python -m tox
 
 push:  ## Push code with tags
 	git push && git push --tags
 
-test:  ## Run tests
-	python -m pytest -ra --doctest-modules --doctest-continue-on-failure
+publish:  ## Publish to PyPi
+	python -m flit publish
 
-tox:   ## Run tox
-	python -m tox
